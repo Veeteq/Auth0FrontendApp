@@ -1,10 +1,25 @@
-# Auth0Authentication
+# Auth0 & Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+https://www.youtube.com/watch?v=T9_egVQ3QAI
+https://www.youtube.com/playlist?list=PLshTZo9V1-aE4lo3ByFQWex5b-QXeyX-P
+
+https://github.com/auth0-blog/auth0-angular-sample
+
+# Styling
+https://semantic-ui.com/
+
+# Auth0 Dashboard
+https://manage.auth0.com/dashboard
+
+# Backend SpringBoot Application
+https://github.com/auth0-samples/auth0-spring-security5-api-sample
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

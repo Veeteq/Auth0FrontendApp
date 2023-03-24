@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Auth0Authentication';
+  title = 'Auth0 Angular';
+
+  constructor(public authService: AuthService, @Inject(DOCUMENT) public document: Document) {
+    console.log('AppComponent constructor');    
+  }
+
+  loginWithRedirect() {
+    this.authService.loginWithRedirect();
+  }
+
+  logout() {    
+    this.authService.logout({ logoutParams: { 
+      returnTo: this.document.location.origin 
+    } })
+  }
 }

@@ -1,0 +1,19 @@
+<div *ngIf="authService.user$ | async as user">
+  <div class="ui celled grid">
+    <div class="row">
+      <div class="three wide column">
+        <img 
+        class="ui small circular image"
+        [src]="user.picture"
+        alt="User's profile picture"        
+      />
+      </div>
+      <div class="thirteen wide column">
+        <h2>{{ user.name }}</h2>
+        <p class="lead text-muted">{{ user.email }}</p>
+      </div>
+    </div>    
+  </div>
+  <div class="row" *ngIf="profileJson"></div>
+      <pre class="col-12 text-light bg-dark p-4">{{ profileJson }}</pre>
+  </div>
