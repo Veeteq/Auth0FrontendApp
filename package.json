@@ -20,7 +20,7 @@
     "@angular/router": "^15.2.4",
     "@auth0/auth0-angular": "^2.0.2",
     "rxjs": "~7.4.0",
-    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-css": "^2.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

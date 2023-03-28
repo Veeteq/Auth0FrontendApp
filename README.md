@@ -1,8 +1,8 @@
-# Auth0 & Angular
+# Auth0 & Angular Frontend
 
 https://www.youtube.com/watch?v=T9_egVQ3QAI
 https://www.youtube.com/playlist?list=PLshTZo9V1-aE4lo3ByFQWex5b-QXeyX-P
-
+https://github.com/auth0-samples/auth0-spring-security5-api-sample
 https://github.com/auth0-blog/auth0-angular-sample
 
 # Styling
@@ -12,8 +12,10 @@ https://semantic-ui.com/
 https://manage.auth0.com/dashboard
 
 # Backend SpringBoot Application
-https://github.com/auth0-samples/auth0-spring-security5-api-sample
 
+https://auth0.com/docs/quickstart/backend/java-spring-security5/01-authorization
+https://auth0.com/blog/spring-boot-java-tutorial-build-a-crud-api/
+https://auth0.com/docs/quickstart/spa/angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
