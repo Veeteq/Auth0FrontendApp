@@ -1,19 +1,16 @@
-<div *ngIf="authService.user$ | async as user">
-  <div class="ui celled grid">
-    <div class="row">
-      <div class="three wide column">
-        <img 
-        class="ui small circular image"
-        [src]="user.picture"
-        alt="User's profile picture"        
-      />
-      </div>
-      <div class="thirteen wide column">
-        <h2>{{ user.name }}</h2>
-        <p class="lead text-muted">{{ user.email }}</p>
-      </div>
+<div class="flex" *ngIf="authService.user$ | async as user">
+  <div class="m-auto">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ user.name }}</mat-card-title>
+          <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+          <img mat-card-sm-image [src]="user.picture" alt="User's profile picture">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <pre>{{ profileJson }}</pre>
+      </mat-card-content>
+    </mat-card>
     </div>    
-  </div>
-  <div class="row" *ngIf="profileJson"></div>
-      <pre class="col-12 text-light bg-dark p-4">{{ profileJson }}</pre>
   </div>
