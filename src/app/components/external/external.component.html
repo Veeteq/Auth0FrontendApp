@@ -4,10 +4,10 @@
     Use these buttons to call an external API. The protected API call has an
     access token in its authorization header. The API server will validate the
     access token using the Auth0 Audience value.
-  </p>
-  <div class="btn-group mt-5" role="group" aria-label="External API Requests Examples">
-    <button (click)="callApi()" type="button" class="ui primary button">Get Public Message</button>
-    <button (click)="callSecureApi()" type="button" class="ui secondary button">Get Protected Message</button>
+  </p>  
+  <div class="button-row" aria-label="External API Requests Examples">
+    <button mat-raised-button color="primary" (click)="callApi()" type="button" >Get Public Message</button>
+    <button mat-raised-button color="primary" (click)="callSecureApi()" type="button">Get Protected Message</button>
   </div>
   <div *ngIf="message" class="mt-5">
     <h6 class="muted">Result</h6>
