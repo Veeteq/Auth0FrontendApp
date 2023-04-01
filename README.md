@@ -1,5 +1,11 @@
 # Auth0 & Angular Frontend
 
+1. Add Material
+ng add @angular/material
+
+2. Add Auth0
+npm install @auth0/auth0-angular
+
 https://www.youtube.com/watch?v=T9_egVQ3QAI
 https://www.youtube.com/playlist?list=PLshTZo9V1-aE4lo3ByFQWex5b-QXeyX-P
 https://github.com/auth0-samples/auth0-spring-security5-api-sample

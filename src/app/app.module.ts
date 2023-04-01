@@ -1,14 +1,18 @@
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExternalComponent } from './components/external/external.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { MaterialModule } from './material.module';
 
 import { environment as env } from 'src/environments/environment';
-import { AppRoutingModule } from './app-routing.module';
-import { ExternalComponent } from './external/external.component';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,11 @@ import { ProfileComponent } from './profile/profile.component';
     ExternalComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
+    MaterialModule,
     AppRoutingModule,
     AuthModule.forRoot({
       domain: env.auth.domain,

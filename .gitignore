@@ -7,7 +7,7 @@
 # Only exists if Bazel was run
 /bazel-out
 
-# dependencies
+# Node
 /node_modules
 
 # profiling files
@@ -15,6 +15,7 @@ chrome-profiler-events*.json
 
 # IDEs and editors
 /.idea
+.idea/
 .project
 .classpath
 .c9/
@@ -30,7 +31,7 @@ chrome-profiler-events*.json
 !.vscode/extensions.json
 .history/*
 
-# misc
+# Miscellaneous
 /.angular/cache
 /.sass-cache
 /connect.lock

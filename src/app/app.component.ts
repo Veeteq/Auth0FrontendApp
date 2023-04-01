@@ -1,8 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
-
-declare var jQuery: any;
 
 @Component({
   selector: 'app-root',
@@ -10,17 +8,10 @@ declare var jQuery: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Auth0 Angular';
+  title = 'Auth0 Frontend Application';
 
   constructor(public authService: AuthService, 
-              @Inject(DOCUMENT) public document: Document,
-              private dropdown: ElementRef) {
-    console.log('AppComponent constructor');    
-  }
-
-  ngAfterViewInit(): void {
-    (this.dropdown.nativeElement).dropdown();
-  }
+              @Inject(DOCUMENT) public document: Document){}
 
   loginWithRedirect() {
     this.authService.loginWithRedirect();

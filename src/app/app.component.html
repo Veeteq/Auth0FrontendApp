@@ -1,32 +1,11 @@
-<div class="ui fixed inverted menu">
-  <div class="ui container">
-    <a routerLink="/" class="header item">
-      <img class="ui mini image" src="assets/angular.svg">
-      &nbsp;
-      {{ title }}
-    </a>
-    <a routerLink="/profile"  class="header item" routerLinkActive="router-link-exact-active">Profile</a>
-    <div class="ui dropdown item">
-      More
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="item">Applications</div>
-        <div class="item">International Students</div>
-        <div class="item">Scholarships</div>
-      </div>
-    </div>
-    <a routerLink="/external" class="header item" routerLinkActive="router-link-exact-active">External API</a>
-    <a class="item" *ngIf="!(authService.isAuthenticated$ | async)" (click)="loginWithRedirect()">Login</a>
-    <a id="logout-button" class="item" *ngIf="(authService.isAuthenticated$ | async)" (click)="logout()">Logout</a>
-  </div>
-</div>
-
-<div class="ui main text container"> <!-- style="margin-top: 7em;" -->
-  <router-outlet></router-outlet>
-</div>
-
-<div class="ui inverted vertical footer segment">
-  <div class="ui center aligned container">
-    &copy; &nbsp; Copyright 2023 &nbsp;|&nbsp; WW &nbsp;
-  </div>
-</div>
+<mat-toolbar>  
+  <mat-toolbar-row>
+    <button mat-button [routerLink]="['/home']"     routerLinkActive="mat-accent">Home</button>
+    <button mat-button [routerLink]="['/profile']"  routerLinkActive="mat-accent">Profile</button>
+    <button mat-button [routerLink]="['/external']" routerLinkActive="mat-accent">External</button>
+    <span class="spacer"></span>
+    <button mat-stroked-button *ngIf="!(authService.isAuthenticated$ | async)" (click)="loginWithRedirect()">Login</button>
+    <button mat-stroked-button *ngIf="(authService.isAuthenticated$ | async)" (click)="logout()" id="logout-button">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
