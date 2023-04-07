@@ -1,0 +1,25 @@
+<div>
+  <button mat-button (click)="addItem()">ADD</button>
+</div>
+<mat-grid-list cols="3" rowHeight="2:1" gutterSize="20" m-t="10px">
+  <mat-grid-tile *ngFor="let item of items | async" style="border: solid 2px #456;">
+
+    <mat-card class="item-card" style="border: 1px white solid;">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-subtitle>{{ item.price / 100 | number:'1.2-2' }}</mat-card-subtitle>
+          <img mat-card-md-image [src]="item.image" alt="User's profile picture">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <pre>{{ item.description }}</pre>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="editItem(item.id)">EDIT</button>
+        <button mat-button (click)="deleteItem(item.id)">DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>

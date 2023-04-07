@@ -2,5 +2,5 @@
   "domain": "dev-cukzhqgoa6ykdkpk.us.auth0.com",
   "clientId": "z1ZvF19lJOKJHf0aIxHKKeskjiqPKgvM",
   "audience": "http://springbootsecure/api",
-  "apiUrl": "http://localhost:8088"
+  "apiUrl": "http://192.168.10.97:8088"
 }
