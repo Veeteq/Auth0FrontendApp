@@ -8,7 +8,7 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Auth0 Frontend Application';
+  title = 'Auth0 Application';
 
   constructor(public authService: AuthService, 
               @Inject(DOCUMENT) public document: Document){}

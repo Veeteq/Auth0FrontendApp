@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MaterialModule } from './material.module';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment as env } from 'src/environments/environment';
 import { FormComponent } from './components/items/form/form.component';
 
@@ -30,6 +30,7 @@ import { FormComponent } from './components/items/form/form.component';
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     MaterialModule,

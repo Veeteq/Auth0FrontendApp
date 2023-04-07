@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Auth0FrontendApp": {
+    "Auth0App": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,14 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Auth0FrontendApp",
+            "outputPath": "dist/auth0-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -45,12 +44,6 @@
                   "maximumError": "4kb"
                 }
               ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
               "outputHashing": "all"
             },
             "development": {
@@ -68,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Auth0FrontendApp:build:production"
+              "browserTarget": "Auth0App:build:production"
             },
             "development": {
-              "browserTarget": "Auth0FrontendApp:build:development"
+              "browserTarget": "Auth0App:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Auth0FrontendApp:build"
+            "browserTarget": "Auth0App:build"
           }
         },
         "test": {
