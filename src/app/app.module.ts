@@ -9,22 +9,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExternalComponent } from './components/external/external.component';
 import { HomeComponent } from './components/home/home.component';
+import { ItemsComponent } from './components/items/items.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MaterialModule } from './material.module';
 
+import { FormsModule } from '@angular/forms';
 import { environment as env } from 'src/environments/environment';
+import { FormComponent } from './components/items/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    ExternalComponent
+    ExternalComponent,
+    ItemsComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     MaterialModule,
     AppRoutingModule,
@@ -32,9 +38,12 @@ import { environment as env } from 'src/environments/environment';
       domain: env.auth.domain,
       clientId: env.auth.clientId,
       authorizationParams: env.auth.authorizationParams,
-      //... env.auth,
       httpInterceptor: {
-        allowedList: [`${env.dev.apiUrl}/api/private`]
+        allowedList: [
+          `${env.dev.apiUrl}/api/menu/items*`,
+          `${env.dev.apiUrl}/api/private`,
+          
+        ]
       }
     })
   ],

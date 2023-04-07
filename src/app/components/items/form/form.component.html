@@ -1,0 +1,38 @@
+<div class="flex">
+  <div class="m-auto">
+    <mat-card>
+      <mat-card-title>Create new item</mat-card-title>
+      <form class="item-form" (ngSubmit)="onSubmit()">
+        <mat-card-content>
+          <!-- <div [hidden]="submitted" style="width: 400px;"> -->
+          <mat-form-field appearance="fill" class="item-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" id="name" required [(ngModel)]="item.name" name="item.name">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="item-full-width">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" id="description" required [(ngModel)]="item.description" name="item.description">
+          </mat-form-field>
+          <mat-form-field appearance="fill" floatLabel="always" class="item-full-width">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="item-right-align" placeholder="0" id="description" required
+              [(ngModel)]="item.price" name="item.price">
+            <span matTextPrefix>$&nbsp;</span>
+            <span matTextSuffix>.00</span>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="item-full-width">
+            <mat-label>Image URL</mat-label>
+            <input matInput type="url" id="image" required [(ngModel)]="item.image" name="item.image">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button type="submit" mat-raised-button style="float: right;">Save</button>
+        </mat-card-actions>
+      </form>
+    <!-- </div> -->
+      <!-- <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+      </div> -->
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+mat-grid-list {
+  margin: 0 15px;
+}
+/*
+mat-card {
+  width: 90%;
+  height: 90%;
+}
+*/
+.item-card {
+  width: 400px;
+  max-width: 500px;
+  margin: 8px 4px;
+}

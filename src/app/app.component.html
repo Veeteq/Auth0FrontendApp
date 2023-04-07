@@ -7,7 +7,7 @@
       <mat-icon>arrow_drop_down</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['/external']">Items</button>
+      <button mat-menu-item [routerLink]="['/items']">Items</button>
       <button mat-menu-item [routerLink]="['/external']">Messages</button>
     </mat-menu>
     <span class="spacer"></span>
@@ -16,3 +16,8 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>
+<footer class="footer">
+  <div class="container">
+      <span>All Rights Reserved 2019 @JavaGuides</span>
+  </div>
+</footer>

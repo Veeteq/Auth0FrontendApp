@@ -7,6 +7,8 @@ ng add @angular/material
 npm install @auth0/auth0-angular
 
 https://www.youtube.com/watch?v=DaE_RpWRlJI
+https://www.javaguides.net/2019/06/spring-boot-angular-7-crud-example-tutorial.html
+https://github.com/jhades/angular2-rxjs-observable-data-services/tree/0fa6606209b8393dbeabf94f78f7346d23a169ca
 https://www.youtube.com/watch?v=T9_egVQ3QAI
 https://www.youtube.com/playlist?list=PLshTZo9V1-aE4lo3ByFQWex5b-QXeyX-P
 https://github.com/auth0-samples/auth0-spring-security5-api-sample

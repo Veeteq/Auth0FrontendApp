@@ -12,23 +12,22 @@ interface Message {
   styleUrls: ['./external.component.css']
 })
 export class ExternalComponent {
+  private baseUrl = `${env.dev.apiUrl}/api`;
   message: string = "";
 
   constructor(private http: HttpClient) {}
 
   callApi(): void {
-    this.http
-    .get<Message>(`${env.dev.apiUrl}/api/public`)
-    .subscribe(
+    const url = `${this.baseUrl}/public`;
+    this.http.get<Message>(url).subscribe(
       (data: Message) => {
         this.message = data.message;
       })
   }
 
   callSecureApi() {
-    this.http
-    .get<Message>(`${env.dev.apiUrl}/api/private`)
-    .subscribe(
+    const url = `${this.baseUrl}/private`
+    this.http.get<Message>(url).subscribe(
       (data: Message) => {
         this.message = data.message;
       }
