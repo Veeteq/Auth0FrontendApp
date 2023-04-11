@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { environment as env } from 'src/environments/environment';
 import { Item } from '../model/item';
+import { Message } from '../model/message';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,6 @@ export class ItemService {
   items: Observable<Item[]>;
 
   constructor(private httpClient: HttpClient) { }
-
   
   getAll(): Observable<Item[]> {
     const url = this.baseUrl;
@@ -37,6 +37,11 @@ export class ItemService {
     const body = JSON.stringify(item);
     return this.httpClient.post<Item>(`${url}`, body, {'headers': headers});
   }
+
+  getMessage(): Observable<Message> {
+    const url = `${this.baseUrl}/message`;
+    return this.httpClient.get<Message>(url);
+  }  
 
   updateItem(id: number, item: Item): Observable<Item> {
     const headers = { 'Content-type': 'application/json'};

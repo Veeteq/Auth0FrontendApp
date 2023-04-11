@@ -1,10 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Message } from 'src/app/model/message';
 import { environment as env } from 'src/environments/environment';
-
-interface Message {
-  message: string
-}
 
 @Component({
   selector: 'app-external',
