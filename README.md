@@ -26,3 +26,6 @@ https://auth0.com/docs/quickstart/spa/angular
 https://www.youtube.com/watch?v=DaE_RpWRlJI
 https://www.javaguides.net/2019/06/spring-boot-angular-7-crud-example-tutorial.html
 https://github.com/jhades/angular2-rxjs-observable-data-services/tree/0fa6606209b8393dbeabf94f78f7346d23a169ca
+
+# Build and run Angular application in a Docker container
+https://wkrzywiec.medium.com/build-and-run-angular-application-in-a-docker-container-b65dbbc50be8

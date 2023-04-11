@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/model/item';
+import { Message } from 'src/app/model/message';
 import { ItemService } from 'src/app/services/item.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class ItemsComponent implements OnInit {
   items: Observable<Item[]>;
+  message: string;
   status: string;
   errMsg: string;
 
@@ -22,7 +24,20 @@ export class ItemsComponent implements OnInit {
   }
 
   reloadData() {
+    this.getMessage();
     this.items = this.itemService.getAll();
+  }
+
+  private getMessage() {
+    this.itemService.getMessage().subscribe({
+      next: (data: Message) => {
+        this.message = data.message;
+      },
+      error: error => {
+          console.error('There was an error!', error);
+      }
+    });
+    
   }
 
   addItem() {
